@@ -14,4 +14,5 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: stock_tracker
-     
+          path: dist/stock_tracker.exe
+```
