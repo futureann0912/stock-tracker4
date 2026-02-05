@@ -1,4 +1,4 @@
-```yaml
+yaml
 name: Build EXE
 on: [push, workflow_dispatch]
 jobs:
@@ -15,4 +15,3 @@ jobs:
         with:
           name: stock_tracker
           path: dist/stock_tracker.exe
-```
