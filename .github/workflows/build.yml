@@ -1,0 +1,17 @@
+```yaml
+name: Build EXE
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install -r requirements.txt pyinstaller
+      - run: pyinstaller --onefile --windowed --name stock_tracker main.py
+      - uses: actions/upload-artifact@v3
+        with:
+          name: stock_tracker
+     
